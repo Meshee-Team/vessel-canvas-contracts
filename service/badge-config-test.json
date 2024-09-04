@@ -1,0 +1,14 @@
+[
+  {
+    "ID": "badge1",
+    "NAME": "VesselBadgeV1",
+    "URI": "http://vessel.finance",
+    "ADDRESS": "0x83DF97E3a1715cEe846fd9722BCE4Ac47cD9Aa01"
+  },
+  {
+    "ID": "badge2",
+    "NAME": "VesselBadgeV1",
+    "URI": "http://vessel2.finance",
+    "ADDRESS": "0x53FE938c108A142C9CDC79DB62D73B77Ba77C64F"
+  }
+]

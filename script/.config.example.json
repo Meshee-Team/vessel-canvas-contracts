@@ -1,0 +1,31 @@
+{
+  "essential": {
+    "DEPLOYER_SK": "0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "ADMIN_ADDRESS": "0xffffffffffffffffffffffffffffffffffffffff",
+    "ATTESTER_ADDRESS": "0xffffffffffffffffffffffffffffffffffffffff",
+    "BADGE_RESOLVER_ADDRESS": "0xffffffffffffffffffffffffffffffffffffffff",
+    "EAS_ADDRESS": "0xffffffffffffffffffffffffffffffffffffffff",
+    "NODE_RPC_URL": "http://192.168.0.1:8546",
+    "CHAIN_ID": 31337,
+    "MAX_FEE_PER_GAS": 50,
+    "MAX_PRIORITY_FEE_PER_GAS": 3,
+    "ENABLE_1559": true,
+    "ENABLE_MULTISIG_ADMIN": false,
+    "SAFE_TX_SERVICE_URL": "https://url-to-safe-service/api",
+    "ATTESTER_PROXY_ADDRESS": "0xffffffffffffffffffffffffffffffffffffffff",
+    "BADGES": [
+      {
+        "ID": "badge1",
+        "NAME": "VesselBadgeExample",
+        "URI": "http://vessel.finance",
+        "ADDRESS": "0x7328473eE3Cec1eCacad081De86a269c90B66503"
+      },
+      {
+        "ID": "badge2",
+        "NAME": "VesselBadgeExample",
+        "URI": "http://vessel.finance",
+        "ADDRESS": "0x7328473eE3Cec1eCacad081De86a269c90B66503"
+      }
+    ]
+  }
+}

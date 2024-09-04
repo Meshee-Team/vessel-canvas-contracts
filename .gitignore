@@ -18,3 +18,27 @@ node_modules
 
 # vscode
 .vscode
+
+# from meex-contract
+# directories
+cache
+out
+abi
+.idea
+
+# files
+*.env
+*.log
+.pnp.*
+lcov.info
+
+# broadcasts
+!broadcast
+broadcast/*
+broadcast/*/31337/
+
+# script related
+script/.config.*.json
+script/**/*.js
+script/**/*.log
+!script/.config.example.json
