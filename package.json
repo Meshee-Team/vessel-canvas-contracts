@@ -4,7 +4,7 @@
   "description": "",
   "main": "",
   "scripts": {
-    "build": "forge build",
+    "build": "forge build --out abi",
     "test": "forge test -vvv"
   },
   "author": "",
