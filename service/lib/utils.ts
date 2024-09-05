@@ -26,6 +26,7 @@ export function formatAddress(address: string): string {
 }
 
 export async function loadBadges(filepath: string): Promise<Map<string, Badge>>{
+  logger.info(`Try to load badges from file: ${filepath}`)
   const data = await fs.promises.readFile(filepath, 'utf-8');
   const badges: Badge[] = JSON.parse(data);
 
