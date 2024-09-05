@@ -17,7 +17,7 @@ export class StatsServerClient {
   }
 
   public async checkEligibility(badgeID: string, address: string): Promise<boolean> {
-    const url = `${this.baseURL}/api/v1/stats/campaign/eligibility/badge?badge_id=${badgeID}&address=${address}`;
+    const url = `${this.baseURL}/api/v1/stats/campaign/eligibility/badge?badgeId=${badgeID}&address=${address}`;
     logger.debug(`Check badge eligibility: badge: ${badgeID}, address: ${address}, url: ${url}`)
 
     try {
