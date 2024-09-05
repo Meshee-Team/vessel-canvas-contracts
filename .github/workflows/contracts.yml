@@ -1,10 +1,13 @@
-on: [push]
+name: ci
 
-name: test
+on:
+  pull_request:
+  push:
+    tags:
+      - 'v*'
 
 jobs:
-  check:
-    name: Foundry project
+  test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -49,3 +52,10 @@ jobs:
       - name: Run foundry tests
         run: forge test -vvv
 
+  build-image-prover:
+    if: github.event_name == 'push'
+    needs: [ test ]
+    uses: ./.github/workflows/docker-build-badge-service.yaml
+    with:
+      image_tags: ${{ github.ref_name }}
+    secrets: inherit
