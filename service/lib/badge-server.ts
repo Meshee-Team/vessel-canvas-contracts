@@ -152,7 +152,7 @@ export class BadgeServer {
     const eligibilityResponse = await this.checkBadgeEligible(badgeAddress, recipientAddress);
 
     let response: ClaimResponse;
-    if (false) {
+    if (!eligibilityResponse.eligibility) {
       response = {
         code: 0,
         message: eligibilityResponse.message,

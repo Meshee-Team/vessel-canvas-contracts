@@ -42,3 +42,6 @@ script/.config.*.json
 script/**/*.js
 script/**/*.log
 !script/.config.example.json
+
+# service related
+service/**/*.js
