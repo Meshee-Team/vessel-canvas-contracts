@@ -238,7 +238,6 @@ export async function setDeployerNonce(nonce: number) {
   }
 }
 
-// check and return missing key
 function checkAllKeysDefined(obj: any): string {
   for (let key of Object.keys(obj)) {
     if (obj[key] === undefined || obj[key] === null) {
@@ -246,4 +245,8 @@ function checkAllKeysDefined(obj: any): string {
     }
   }
   return "";
+}
+
+export function formatAddress(address: string): string {
+  return address.toLowerCase().startsWith('0x') ? address.toLowerCase() : `0x${address.toLowerCase()}`;
 }
