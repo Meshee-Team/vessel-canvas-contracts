@@ -98,11 +98,18 @@ export class BadgeServer {
   }
 
   public async checkHandler(req: Request, res: Response) {
-    const badgeAddress = req.query.badge as string;
-    const recipientAddress = req.query.recipient as string;
-
-    const response = await this.checkBadgeEligible(badgeAddress, recipientAddress);
-    res.json(response);
+    try {
+      const badgeAddress = req.query.badge as string;
+      const recipientAddress = req.query.recipient as string;
+      const response = await this.checkBadgeEligible(badgeAddress, recipientAddress);
+      res.json(response);
+    } catch (err) {
+      res.json({
+        code: 0,
+        message: `client error: ${err}`,
+        eligibility: false,
+      })
+    }
   }
 
   private async createAttestation(
@@ -147,41 +154,49 @@ export class BadgeServer {
   }
 
   public async claimHandler(req: Request, res: Response) {
-    const badgeAddress = req.query.badge as string;
-    const recipientAddress = req.query.recipient as string;
-    const eligibilityResponse = await this.checkBadgeEligible(badgeAddress, recipientAddress);
+    try {
+      const badgeAddress = req.query.badge as string;
+      const recipientAddress = req.query.recipient as string;
+      const eligibilityResponse = await this.checkBadgeEligible(badgeAddress, recipientAddress);
 
-    let response: ClaimResponse;
-    if (!eligibilityResponse.eligibility) {
-      response = {
-        code: 0,
-        message: eligibilityResponse.message,
-      }
-    } else {
-      try {
-        const badge = (this.badgeMap.get(formatAddress(badgeAddress)))!;
-        const proxy = new EIP712Proxy(this.attesterProxyAddress)
-
-        const delegatedAttestationRequest = await this.createAttestation(
-          proxy,
-          badge,
-          recipientAddress,
-        )
-
-        // @ts-ignore
-        const tx = await proxy.contract.attestByDelegation.populateTransaction(delegatedAttestationRequest);
-        response = {
-          code: 1,
-          message: 'success',
-          tx: tx,
-        }
-      } catch (err) {
+      let response: ClaimResponse;
+      if (!eligibilityResponse.eligibility) {
         response = {
           code: 0,
-          message: `failed to generate claim transaction: ${err}`
+          message: eligibilityResponse.message,
+        }
+      } else {
+        try {
+          const badge = (this.badgeMap.get(formatAddress(badgeAddress)))!;
+          const proxy = new EIP712Proxy(this.attesterProxyAddress)
+
+          const delegatedAttestationRequest = await this.createAttestation(
+            proxy,
+            badge,
+            recipientAddress,
+          )
+
+          // @ts-ignore
+          const tx = await proxy.contract.attestByDelegation.populateTransaction(delegatedAttestationRequest);
+          response = {
+            code: 1,
+            message: 'success',
+            tx: tx,
+          }
+        } catch (err) {
+          response = {
+            code: 0,
+            message: `failed to generate claim transaction: ${err}`
+          }
         }
       }
+      res.json(response);
+    } catch (err) {
+      res.json({
+        code: 0,
+        message: `client error: ${err}`
+      })
     }
-    res.json(response);
   }
+
 }
