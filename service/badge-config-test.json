@@ -1,14 +1,32 @@
 [
   {
-    "ID": "badge1",
+    "ID": "newcomer",
     "NAME": "VesselBadgeV1",
     "URI": "http://vessel.finance",
-    "ADDRESS": "0x83DF97E3a1715cEe846fd9722BCE4Ac47cD9Aa01"
+    "ADDRESS": "0x0FD397a44448bFd8E07799B77009FA7bdb09Be63"
   },
   {
-    "ID": "badge2",
+    "ID": "voyage_achiever",
     "NAME": "VesselBadgeV1",
     "URI": "http://vessel2.finance",
-    "ADDRESS": "0x53FE938c108A142C9CDC79DB62D73B77Ba77C64F"
+    "ADDRESS": "0xf9D742C7257f127e545c5863Ac9980bd2C6DEB43"
+  },
+  {
+    "ID": "significant_swapper",
+    "NAME": "VesselBadgeV1",
+    "URI": "http://vessel3.finance",
+    "ADDRESS": "0x9fE1d92Db57D48CeFfadC748342C07d43cfC0228"
+  },
+  {
+    "ID": "liquidity_beginner",
+    "NAME": "VesselBadgeV1",
+    "URI": "http://vessel4.finance",
+    "ADDRESS": "0xE1ecB588FAc818137f40F22766c828268e96006c"
+  },
+  {
+    "ID": "liquidity_master",
+    "NAME": "VesselBadgeV1",
+    "URI": "http://vessel5.finance",
+    "ADDRESS": "0xF693F3E113dCb66aB4eE854D72Face045c9a3B25"
   }
 ]

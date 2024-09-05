@@ -35,6 +35,6 @@ export async function loadBadges(filepath: string): Promise<Map<string, Badge>>{
     badgeMap.set(formatAddress(badge.ADDRESS), badge);
   });
 
-  logger.info(`Load badge configs from config file: ${JSON.stringify(badgeMap)}`)
+  logger.info(`Load badge configs from config file: ${Object.fromEntries(badgeMap)}`)
   return badgeMap;
 }
