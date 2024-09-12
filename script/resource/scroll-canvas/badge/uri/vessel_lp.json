@@ -1,5 +1,5 @@
 {
-  "name": "Vessel Liquidity Provider",
-  "image": "image-url.png",
-  "description": "description of badge"
+  "name": "Vessel LP",
+  "image": "https://static.vessel.finance/scroll-canvas/badge/image/vessel_lp.png",
+  "description": "Vessel LP is for Scrollers whose total value of LP positions on Vessel exceeds $200."
 }

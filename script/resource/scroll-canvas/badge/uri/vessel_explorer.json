@@ -1,5 +1,5 @@
 {
   "name": "Vessel Explorer",
-  "image": "image-url.png",
-  "description": "description of badge"
+  "image": "https://static.vessel.finance/scroll-canvas/badge/image/vessel_explorer.png",
+  "description": "Vessel Explorer badge is for Scrollers who have earned more than 10000 Vessel Mileage through liquidity provision."
 }

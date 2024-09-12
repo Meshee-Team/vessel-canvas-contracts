@@ -1,5 +1,5 @@
 {
   "name": "Vessel Voyager",
-  "image": "image-url.png",
-  "description": "description of badge"
+  "image": "https://static.vessel.finance/scroll-canvas/badge/image/vessel_voyager.png",
+  "description": "Vessel Voyager badge is for Scrollers whose total value of deposited assets on Vessel exceeds $50."
 }
