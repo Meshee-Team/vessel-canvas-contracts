@@ -1,0 +1,20 @@
+[
+  {
+    "ID": "vessel_explorer",
+    "NAME": "VesselBadgeV1",
+    "URI": "https://static.vessel.finance/scroll-canvas/badge/uri/vessel_explorer.json",
+    "ADDRESS": "0x5E00604FDBD29E8a8bcCC02F9479E5073EA67FF2"
+  },
+  {
+    "ID": "vessel_lp",
+    "NAME": "VesselBadgeV1",
+    "URI": "https://static.vessel.finance/scroll-canvas/badge/uri/vessel_lp.json",
+    "ADDRESS": "0x4Dd9010FD8F3015BF96e4aceBd690563232d87F1"
+  },
+  {
+    "ID": "vessel_voyager",
+    "NAME": "VesselBadgeV1",
+    "URI": "https://static.vessel.finance/scroll-canvas/badge/uri/vessel_voyager.json",
+    "ADDRESS": "0xDbb35302D8AE94B36c6Cd3dEf924374b215f7812"
+  }
+]
