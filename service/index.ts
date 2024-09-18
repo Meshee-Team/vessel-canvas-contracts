@@ -35,6 +35,7 @@ const main = async () => {
 
   app.listen(port, () => {
     logger.info(`Server is running on http://localhost:${port}`);
+    Sentry.captureMessage(`Scroll Canvas service starts running`)
   });
 };
 

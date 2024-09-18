@@ -12,7 +12,8 @@ export interface Badge {
 
 export function initializeSentry(env: string) {
   Sentry.init({
-    dsn: "",
+    dsn: "https://b7a7ec2180c973c655847af5acb87dea@o4507774311137280.ingest.de.sentry.io/4507972299784272",
+    environment: env,
     integrations: [
       nodeProfilingIntegration(),
     ],
